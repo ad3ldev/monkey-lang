@@ -37,6 +37,8 @@ const (
 	LBRACKET = "["
 	RBRACKET = "]"
 	COLON    = ":"
+	// MACROS
+	MACRO = "MACRO"
 )
 
 type TokenType string
@@ -53,6 +55,7 @@ var keywords = map[string]TokenType{
 	"if":     IF,
 	"else":   ELSE,
 	"return": RETURN,
+	"macro":  MACRO,
 }
 
 func LookupIdent(ident string) TokenType {
